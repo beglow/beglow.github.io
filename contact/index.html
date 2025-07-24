@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact - Beglow</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Beglow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+	<link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
+	<link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../styles/contact_styles.css">
+	<link rel="stylesheet" type="text/css" href="../styles/contact_responsive.css">
+	<link rel="icon" type="image/svg+xml" href="../images/beglow-fav.svg" />
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+		<div id="header"></div>
+
+		<div class="container contact_container">
+			<div class="row">
+				<div class="col">
+
+					<!-- Breadcrumbs -->
+
+					<div class="breadcrumbs d-flex flex-row align-items-center">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="#"><i class="fa fa-angle-right"
+										aria-hidden="true"></i>Contact</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-lg-6 contact_col">
+					<div class="contact_contents">
+						<h1>Liên hệ với chúng tôi</h1>
+						<p><strong>Địa chỉ trụ sở:</strong> C-TT6-3 tại Dự án Khu nhà ở Him Lam Vạn Phúc, Phường Vạn
+							Phúc, Quận Hà Đông,
+							Thành phố Hà Nội, Việt Nam</p>
+						<div>
+							<p><strong>Hotline:</strong> 037 525 7007</p>
+							<p><strong>Email:</strong> contact@beglow.vn</p>
+						</div>
+						<div>
+							<p><strong>Mã số thuế: </strong> 0110708645 được Sở kế hoạch và đầu tư cấp giấy chứng nhận
+								đăng ký kinh doanh
+								ngày 09/05/2024.</p>
+						</div>
+						<!-- <div>
+						<p>Open hours: 8.00-18.00 Mon-Fri</p>
+						<p>Sunday: Closed</p>
+					</div> -->
+					</div>
+
+					<!-- Follow Us -->
+
+					<div class="follow_us_contents">
+						<h1>Follow Us</h1>
+						<ul class="social d-flex flex-row">
+							<li><a href="#" style="background-color: #3a61c9;pointer-events: none;"><i
+										class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#" style="background-color: #41a1f6;pointer-events: none;"><i
+										class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#" style="background-color: #fb4343;pointer-events: none;"><i
+										class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#" style="background-color: #8f6247;pointer-events: none;"><i
+										class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="col-lg-6 get_in_touch_col">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2583.9669662626725!2d105.7685683751794!3d20.97969615975753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zY3Q2IGtodSBuaMOgIOG7nyBoaW0gbGFtIHbhuqFuIHBow7pj!5e0!3m2!1svi!2s!4v1753094681778!5m2!1svi!2s"
+						width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- Newsletter -->
+		<div id="newsletter"></div>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+
+	</div>
+
+
+	<!-- Import common -->
+
+	<script>
+		function includeSomeHTML(components = [], folder = "../common/") {
+			components.forEach(name => {
+				const el = document.getElementById(name);
+				if (el) {
+					fetch(folder + name + ".html")
+						.then(response => response.text())
+						.then(data => el.innerHTML = data);
+				}
+			});
+		}
+
+		// Chỉ định các thành phần dùng chung cần nhúng
+		includeSomeHTML(["header", "benefit", "newsletter", "footer"]);
+	</script>
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../styles/bootstrap4/popper.js"></script>
+	<script src="../styles/bootstrap4/bootstrap.min.js"></script>
+	<script src="../plugins/Isotope/isotope.pkgd.min.js"></script>
+	<script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+	<script src="../plugins/easing/easing.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+	<script src="../plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+	<script src="../js/contact_custom.js"></script>
+
+
+</body>
+
+</html>
