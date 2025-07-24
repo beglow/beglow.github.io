@@ -376,7 +376,7 @@
 
 	<!-- Import common -->
 
-	<script>
+	<!-- <script>
 		function includeSomeHTML(components = [], folder = "./common/") {
 			components.forEach(name => {
 				const el = document.getElementById(name);
@@ -390,7 +390,31 @@
 
 		// Chỉ định các thành phần dùng chung cần nhúng
 		includeSomeHTML(["header", "benefit", "newsletter", "footer"]);
-	</script>
+	</script> -->
+	<script>
+	function includeSomeHTML(components = [], folder = "/common/", callback = null) {
+		let loaded = 0;
+		components.forEach(name => {
+			const el = document.getElementById(name);
+			if (el) {
+				fetch(folder + name + ".html")
+					.then(response => response.text())
+					.then(data => {
+						el.innerHTML = data;
+						loaded++;
+						if (loaded === components.length && typeof callback === "function") {
+							callback(); // gọi sau khi tất cả đã load xong
+						}
+					});
+			}
+		});
+	}
+
+	includeSomeHTML(["header", "benefit", "newsletter", "footer"], "/common/", function () {
+		if (typeof initMenu === "function") initMenu();
+		if (typeof setHeader === "function") setHeader();
+	});
+</script>
 
 	<script src="./js/jquery-3.2.1.min.js"></script>
 	<script src="./styles/bootstrap4/popper.js"></script>
