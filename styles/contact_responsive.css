@@ -231,7 +231,7 @@
 	}
 	.breadcrumbs ul li a
 	{
-		font-size: 13px;
+		font-size: 16px;
 	}
 	.breadcrumbs ul li i
 	{
@@ -379,7 +379,7 @@
 	}
 	.menu_item > a
 	{
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 35px;
 		height: 35px;
 	}
@@ -468,7 +468,7 @@
 	}
 	.footer_nav_container
 	{
-		margin-top: 35px;
+		margin-top: 8px;
 	}
 	.cr
 	{
@@ -483,6 +483,12 @@
 		margin-top: 5px;
 		margin-bottom: -20px;
 	}
+	.breadcrumbs {
+		border: none;
+		margin-top: 12px;
+		margin-bottom: 0px;
+	}
+	
 }
 
 /************
