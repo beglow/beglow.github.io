@@ -218,7 +218,7 @@
 							<!-- Nhóm 2: Nút thêm vào giỏ + yêu thích -->
 							<div class="d-flex align-items-center">
 								<div class="red_button add_to_cart_button me-3">
-									<a href="./CB_BEGLOW_Celestial_Glow_Cream.pdf" target="_blank">Xem ngay
+									<a href="#pdf" target="_blank">Xem ngay
 										Công bố</a>
 								</div>
 								<div
@@ -289,7 +289,7 @@
 									<p><strong>Khối lượng tịnh: 48g</strong><br></p>
 									<p><strong>Sản xuất tại: Việt Nam</strong><br></p>
 
-									<p><strong>Xem công bố mỹ phẩm ↓</strong></p>
+									<p id="pdf"><strong>Xem công bố mỹ phẩm ↓</strong></p>
 									<!-- <a href="./CB_BEGLOW_Celestial_Glow_Cream.pdf" class="btn" target="_blank">Xem ngay
 										Công bố mỹ phẩm ↓</a> -->
 									<iframe
@@ -404,7 +404,20 @@
 	<script src="../../plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 	<script src="../../js/single_custom.js"></script>
 
-
+	<!-- Cuộn khi click nút href id -->
+	<script>
+		$(document).ready(function () {
+			$('a[href^="#"]').on('click', function (event) {
+				event.preventDefault();
+				var target = $(this.getAttribute('href'));
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 800); // 800ms là tốc độ cuộn
+				}
+			});
+		});
+	</script>
 
 </body>
 
