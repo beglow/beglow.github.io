@@ -1303,3 +1303,33 @@ textarea:hover
 {
 	color: #fe4c50;
 }
+
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 22px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  text-align: center;
+  transition: background-color 0.3s;
+  animation: shake 2s infinite;
+}
+
+.call-button:hover {
+  background-color: #218838;
+}
